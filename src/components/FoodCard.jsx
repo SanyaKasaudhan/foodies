@@ -15,15 +15,15 @@ const FoodCard = () => {
           data.map((element, id) => {
             return (
               <>
-                <Card className="mx-2 my-4 card_style justify-self-center">
+                <Card className="mx-2 my-4 card_style justify-self-center  ">
                   <Card.Img variant="top" src={element.imgdata}  className="mt-3 h-60 w-72" />
                   <Card.Body>
                     <Card.Title>{element.rname}</Card.Title>
                     <Card.Text>
                     Price : ₹ {element.price}
                     </Card.Text>
-                    <div className="button_div d-flex justify-content-center">
-                    <Button className="btn bg-orange-300 p-2 rounded-md">Add to cart</Button>
+                    <div className="button_div d-flex justify-content-center align-items-center">
+                    <Button className="btn bg-orange-300 px-3 py-2 rounded-md ">Add to cart</Button>
                     </div>
                   
                   </Card.Body>

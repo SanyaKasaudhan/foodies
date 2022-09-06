@@ -1,10 +1,14 @@
 import React from 'react'
+import { GrCart } from "react-icons/gr";
+// import Badge from '@mui/material/Badge';
 
+import MailIcon from '@material-ui/icons/Mail';
+import Badge from '@material-ui/core/Badge';
 const Navbar = () => {
   return (
     <div>
          {/* Navbar start */}
-      <nav className="bg-lime-500 border-gray-200 sm:px-4  dark:bg-gray-900">
+      <nav className="bg-lime-500 border-gray-200 sm:px-4 justify-items-center  dark:bg-gray-900">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <div className="navbar flex justify-between items-center md:hidden">
             <div className="flex justify-center items-center">
@@ -58,7 +62,20 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
+            <span
+                
+                  className="flex flex-row-reverse sm:m-2 md:m-2"
+                >
+                   <div style={{display: 'block', marginTop: -48}} >
+                  <Badge badgeContent={4}  className="sm:m-2 md:m-2"
+      color="primary">
+        <GrCart />
+      </Badge>
+      </div>
+            </span>
+                      
           </div>
+          
         </div>
       </nav>
       {/* Navbar ends */}

@@ -108,12 +108,12 @@ const Cardsdata = [
          qnty:0
     },
     {
-        id: 12,
-        rname: "Cheese sandwich",
-        imgdata: "https://assets3.thrillist.com/v1/image/2919049/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg",
-        address: "Cheese Sandwich, Fast Food",
-        price: 90,
-        rating: "3.5",
+        id: 13,
+        rname: "Pan Cake",
+        imgdata: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnY5DNawP3guQDQo1hu-8BXkawBoaD1D9xFF16gErWWiOGyLPWu3uTbSIhEmeBiNtxxOg&usqp=CAU",
+        address: "Pan Cake, Fast Food",
+        price: 170,
+        rating: "3.7",
          qnty:0
     },
 ];
