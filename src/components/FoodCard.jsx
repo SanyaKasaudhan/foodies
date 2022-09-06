@@ -1,67 +1,76 @@
 import React, { useState } from "react";
 import Carddata from "./Data";
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 const FoodCard = () => {
   const [data, setData] = useState(Carddata);
   console.log(data);
   return (
-    <div>
-      <h1 className="mt-8 text-center mb-8 text-lime-300 text-3xl font-bold">
-        Food Ordering Page
+    <div className='mt-3'>
+     <h1 className="mt-8 text-center mb-2 text-lime-300 text-3xl font-bold">
+        Menu
       </h1>
-      {/* Card starts */}
-      {data.map((e, i) => {
+      <div className="row flex flex-wrap justify-center ">
+        {
+          data.map((element, id) => {
+            return (
+              <>
+                <Card className="mx-2 my-4 card_style justify-self-center">
+                  <Card.Img variant="top" src={element.imgdata}  className="mt-3 h-60 w-72" />
+                  <Card.Body>
+                    <Card.Title>{element.rname}</Card.Title>
+                    <Card.Text>
+                    Price : ₹ {element.price}
+                    </Card.Text>
+                    <div className="button_div d-flex justify-content-center">
+                    <Button className="btn bg-orange-300 p-2 rounded-md">Add to cart</Button>
+                    </div>
+                  
+                  </Card.Body>
+                </Card>
+              </>
+            )
+          })
+        }
+
+      </div>
+      
+
+    
+    {/* <div className="row d-flex justify-content-center align-items-center">
+      {
+        data.map((element, id) => {
           return (
             <>
-      <div className="lg:flex lg:flex-row lg:items-center shadow-md md:row md:d-flex  hover:bg-gray-100">
-       
-              <a
-                href="#"
-                className="lg:flex lg:flex-row lg:items-center m-5 bg-white rounded-lg border md:w-11/12 h-56 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                <img
-                  className="object-cover ml-3 w-40 h-48 rounded-t-lg "
-                  src={e.imgdata}
-                  alt=""
-                />
-                <div className="justify-between p-2">
-                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    {e.rname}{" "}
-                  </h5>
-
-                  <div class="text-sm ">
-                    <span class="text-gray-900 leading-none">Jonathan Reinink</span>
-                    <span class="text-gray-900">Aug 18</span>
+            <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> */}
+              {/* <Card style={{ width: '22rem',border:"none" }} className="mx-2 mt-4 card_style">
+                <Card.Img variant="top" src={element.imgdata} style={{height:"16rem"}} className="mt-3" />
+                <Card.Body>
+                  <Card.Title>{element.rname}</Card.Title>
+                  <Card.Text>
+                  Price : ₹ {element.price}
+                  </Card.Text>
+                  <div className="button_div d-flex justify-content-center">
+                  <Button variant="primary"  
+                   className='col-lg-12'>Add to Cart</Button>
                   </div>
+                
+                </Card.Body>
+              </Card> */}
+            {/* </>
+          )
+        })
+      }
 
-                  <tr>
-                    <td className="mr-8">Price</td>
-                    <td>{e.price}</td>
-                    <td className="mr-8">Description</td>
-                    <td className="mr-8">{e.address}</td>
-                  </tr>
-                  <tr>
-                    <td>Rating</td>
-                    <td>{e.rating}</td>
-                  </tr>
-
-                  <div class="flex justify-between items-center">
-                    <p class="text-xl mr-6 font-bold text-gray-900">$599</p>
-                    <a
-                      href="#"
-                      class="text-white  bg-pink-500 hover:bg-pink-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    >
-                      Add to cart
-                    </a>
-                  </div>
-                </div>
-              </a>
-              
-      </div>
-            </>
-          );
-        })}
-      {/* Card ends */}
-    </div>
+    </div> */}
+  </div>
   );
 };
 
